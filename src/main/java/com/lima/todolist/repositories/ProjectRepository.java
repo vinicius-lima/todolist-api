@@ -12,5 +12,8 @@ import com.lima.todolist.domain.Project;
 public interface ProjectRepository extends JpaRepository<Project, Integer> {
 
 	@Transactional(readOnly=true)
+	public List<Project> findAllByOrderById();
+	
+	@Transactional(readOnly=true)
 	public List<Project> findAllByOrderByName();
 }

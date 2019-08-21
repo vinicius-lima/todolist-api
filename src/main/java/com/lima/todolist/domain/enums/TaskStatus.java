@@ -3,7 +3,9 @@ package com.lima.todolist.domain.enums;
 public enum TaskStatus {
 	
 	TODO(1, "TODO"),
-	DONE(2, "DONE");
+	DONE(2, "DONE"),
+	ONGOING(3, "ONGOING"),
+	ABANDONED(4, "ABANDONED");
 	
 	private int code;
 	private String description;

@@ -61,7 +61,7 @@ public class TaskService {
 	private void updateData(Task newObj, Task obj) {
 		newObj.setTitle(obj.getTitle());
 		newObj.setDescription(obj.getDescription());
-		newObj.setAuthor(obj.getAuthor());
+		newObj.setUpdatedBy(obj.getUpdatedBy());
 		newObj.setStatus(obj.getStatus());
 		newObj.setLastUpdate(obj.getLastUpdate());
 	}
@@ -69,7 +69,7 @@ public class TaskService {
 	public Task fromDTO(TaskDTO objDto) {
 		Project project = projectService.find(objDto.getProjectId());
 		return new Task(objDto.getId(), objDto.getTitle(), objDto.getDescription(),
-				objDto.getAuthor(), TaskStatus.toEnum(objDto.getStatus()),
+				objDto.getAuthor(), objDto.getUpdatedBy(), TaskStatus.toEnum(objDto.getStatus()),
 				objDto.getCreationDate(), objDto.getLastUpdate(), project);
 	}
 	

@@ -23,6 +23,7 @@ public class Task implements Serializable {
 	private String title;
 	private String description;
 	private String author;
+	private String updatedBy;
 	private Integer status;
 	
 	@JsonFormat(pattern="dd/MM/yyyy")
@@ -39,13 +40,14 @@ public class Task implements Serializable {
 		
 	}
 
-	public Task(Integer id, String title, String description, String author, TaskStatus status, Date creationDate,
+	public Task(Integer id, String title, String description, String author, String updatedBy, TaskStatus status, Date creationDate,
 			Date lastUpdate, Project project) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.author = author;
+		this.updatedBy = updatedBy;
 		this.status = (status == null) ? null : status.getCode();
 		this.creationDate = creationDate;
 		this.lastUpdate = lastUpdate;
@@ -114,6 +116,14 @@ public class Task implements Serializable {
 
 	public void setProject(Project project) {
 		this.project = project;
+	}
+
+	public String getUpdatedBy() {
+		return updatedBy;
+	}
+
+	public void setUpdatedBy(String updatedBy) {
+		this.updatedBy = updatedBy;
 	}
 
 	@Override

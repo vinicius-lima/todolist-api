@@ -26,8 +26,8 @@ public class DBService {
 		
 		Project pj1 = new Project(null, "EC2", "Vinícius", sdf.parse("14/08/2019"));
 		
-		Task tk1 = new Task(null, "TASK 1", "Doing a fisrt stuff", "Vinícius", TaskStatus.toEnum(1), sdf.parse("14/08/2019"), sdf.parse("14/08/2019"), pj1);
-		Task tk2 = new Task(null, "TASK 2", "Doing a second stuff", "Antônio", TaskStatus.toEnum(2), sdf.parse("14/08/2019"), sdf.parse("15/08/2019"), pj1);
+		Task tk1 = new Task(null, "TASK 1", "Doing a fisrt stuff", "Vinícius", "Vinícius", TaskStatus.toEnum(1), sdf.parse("14/08/2019"), sdf.parse("14/08/2019"), pj1);
+		Task tk2 = new Task(null, "TASK 2", "Doing a second stuff", "Antônio", "Antônio", TaskStatus.toEnum(2), sdf.parse("14/08/2019"), sdf.parse("15/08/2019"), pj1);
 		
 		pj1.getTasks().addAll(Arrays.asList(tk1, tk2));
 		

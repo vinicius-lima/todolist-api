@@ -13,6 +13,7 @@ public class TaskDTO implements Serializable {
 	private String title;
 	private String description;
 	private String author;
+	private String updatedBy;
 	private String status;
 	
 	@JsonFormat(pattern="dd/MM/yyyy")
@@ -32,6 +33,7 @@ public class TaskDTO implements Serializable {
 		title = obj.getTitle();
 		description = obj.getDescription();
 		author = obj.getAuthor();
+		updatedBy = obj.getUpdatedBy();
 		status = obj.getStatus().getDescription();
 		creationDate = obj.getCreationDate();
 		lastUpdate = obj.getLastUpdate();
@@ -68,6 +70,14 @@ public class TaskDTO implements Serializable {
 
 	public void setAuthor(String author) {
 		this.author = author;
+	}
+
+	public String getUpdatedBy() {
+		return updatedBy;
+	}
+
+	public void setUpdatedBy(String updatedBy) {
+		this.updatedBy = updatedBy;
 	}
 
 	public String getStatus() {

@@ -31,7 +31,7 @@ public class ProjectService {
 	}
 	
 	public List<Project> findAll() {
-		return repo.findAllByOrderByName();
+		return repo.findAllByOrderById();
 	}
 	
 	@Transactional
